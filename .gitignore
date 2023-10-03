@@ -1,0 +1,10 @@
+﻿.vscode
+Temp
+Library
+Logs
+obj
+UserSettings
+.vsconfig
+Assembly-CSharp.csproj
+TEST_CARX.sln
+TestXlabCoding.sln
