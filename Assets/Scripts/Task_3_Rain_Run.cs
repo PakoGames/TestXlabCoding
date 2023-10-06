@@ -13,7 +13,7 @@ public class Task_3_Rain_Run : MonoBehaviour
 
 
 
-    private IEnumerator<Transform> pointInPath;
+    public IEnumerator<Transform> pointInPath;
 
     // Start is called before the first frame update
     void Start()
@@ -36,18 +36,9 @@ public class Task_3_Rain_Run : MonoBehaviour
         point = new Vector3(pointInPath.Current.position.x, 50, pointInPath.Current.position.z);
         transform.position = point;
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void RainRun()
     {
-        #region  од отвечающий за передвижение и позицию облака
-        if (pointInPath == null || pointInPath.Current == null)
-        {
-            return;
-        }
-        point = new Vector3(pointInPath.Current.position.x, 50, pointInPath.Current.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, point, Time.deltaTime * speed);
-
         if (Input.GetKeyDown(KeyCode.Z))
         {
 
@@ -60,6 +51,20 @@ public class Task_3_Rain_Run : MonoBehaviour
             }
 
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        #region  од отвечающий за передвижение и позицию облака
+        if (pointInPath == null || pointInPath.Current == null)
+        {
+            return;
+        }
+        point = new Vector3(pointInPath.Current.position.x, 50, pointInPath.Current.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, point, Time.deltaTime * speed);
+
+        
         #endregion
 
         #region  од отвечающий за вкл/выкл дожд€

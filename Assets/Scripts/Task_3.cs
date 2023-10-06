@@ -11,19 +11,12 @@ public class Task_3 : MonoBehaviour
     #endregion
 
     //Функция спавна объекта.
-    void SpawnStone()
+    public void SpawnStone()
     {
         whereToSpawn = new Vector3(x, y, z);
         Destroy(Instantiate(stone, whereToSpawn, Quaternion.identity), 10);
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            SpawnStone();
-        }
-    }
+   
 }

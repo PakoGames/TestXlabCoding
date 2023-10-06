@@ -11,7 +11,7 @@ public class Task_3_Tools : MonoBehaviour
     private int Tools;
     private int index;
 
-    void ChangeTools()
+    public void ChangeTools()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -24,8 +24,5 @@ public class Task_3_Tools : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        ChangeTools();
-    }
+
 }
