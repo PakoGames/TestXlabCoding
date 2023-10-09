@@ -20,8 +20,6 @@ namespace Golf
 
         private IEnumerator SpawnStoneProc()
         {
-            
-
             do
             {
                 yield return new WaitForSeconds(delay);
