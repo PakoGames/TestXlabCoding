@@ -11,6 +11,7 @@ namespace Golf
     {
         public Task_3 spawner;
         public bool isGameOver = false;
+        public float delay = 0.5f;
 
         private void Start()
         {
@@ -19,7 +20,7 @@ namespace Golf
 
         private IEnumerator SpawnStoneProc()
         {
-            float delay = 0.5f;
+            
 
             do
             {
