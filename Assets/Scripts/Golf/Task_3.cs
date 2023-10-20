@@ -2,21 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Task_3 : MonoBehaviour
+namespace Golf
 {
-    #region Задаем переменные для первой задачи
-    public float x, y, z;
-    [SerializeField] GameObject stone;
-    private Vector3 whereToSpawn;
-    #endregion
-
-    //Функция спавна объекта.
-    public void SpawnStone()
+    public class Task_3 : MonoBehaviour
     {
-        whereToSpawn = new Vector3(x, y, z);
-        Destroy(Instantiate(stone, whereToSpawn, Quaternion.identity), 10);
+        #region Задаем переменные для первой задачи
+        public float x, y, z;
+        [SerializeField] GameObject stone;
+        private Vector3 whereToSpawn;
+        #endregion
+
+        //Функция спавна объекта.
+        public GameObject SpawnStone()
+        {
+            whereToSpawn = new Vector3(x, y, z);
+            GameObject sp = Instantiate(stone, whereToSpawn, Quaternion.identity);
+            return sp;
+
+        }
+
+
+
     }
-
-
-   
 }
