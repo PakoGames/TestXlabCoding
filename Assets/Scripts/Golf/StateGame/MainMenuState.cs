@@ -8,11 +8,12 @@ namespace Golf
 {
     public class MainMenuState : GameState
     {
-        
+        public Timer timer;
         public GameState gamePlayState;
 
         public void PlayGame()
         {
+            timer.TimerStart();
             Exit();
             gamePlayState.Enter();
         }

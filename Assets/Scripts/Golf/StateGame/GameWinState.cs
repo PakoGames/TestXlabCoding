@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 namespace Golf
 {
-    public class GameOverState : GameState
+    public class GameWinState : GameState
     {
+
         public GameState mainMenuState;
 
         public void Restart()
@@ -14,7 +15,7 @@ namespace Golf
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Exit();
             mainMenuState.Enter();
-            
         }
+
     }
 }

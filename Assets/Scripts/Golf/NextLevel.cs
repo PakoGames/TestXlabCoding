@@ -6,15 +6,15 @@ namespace Golf
 {
     public class NextLevel : MonoBehaviour
     {
-        [SerializeField] GameObject level1;
-        [SerializeField] GameObject level2;
+        public LevelController levelController;
+        public int count = 1;
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.tag == "Stone")
             {
-                level1.SetActive(false);
-                level2.SetActive(true);
+                //count++;
+                levelController.countLevel ++;
             }
         }
     }
