@@ -34,7 +34,7 @@ namespace Golf
                  seconds = (t % 60);
 
                 timerText.text = "Time: " + minutes + ":" + seconds;
-                if (minutes > 5)
+                if (minutes > 3)
                 {
                     timerIsRunning = false;
                     StopGame();
